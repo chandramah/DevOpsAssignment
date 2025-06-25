@@ -13,7 +13,7 @@ services:
   
   service1:
     build: ./service_1
-    expose:
+    ports:
       - "8001:8001"
     healthcheck:
   
@@ -24,7 +24,7 @@ services:
   
   service2:
     build: ./service_2
-    expose:
+    ports:
       - "8002:8002"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8002/ping"]
